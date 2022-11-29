@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box */
+}
+
+/* font toegevoegd van buurtcampus */
+@font-face {
+    font-family: 'buurtcampus-bold';
+    src: url('/fonts/BuurtCampusArial-Bold.ttf');
+}
+
+body{
+    background-color: #F3F0EE;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2vh;
+}
+
+header a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.indexTitel{
+    font-family: 'buurtcampus-bold', sans-serif;
+    width: 50vw;
+    color: #333467;
+    font-size: 2.5rem;
+    margin-top: 3vh;
+    align-self: flex-end;
+    text-align: center;
+}
+
+.logo{
+    margin-top: 3vh;
+    width: 15vw;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plant{
+    width: 80vw;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.subtext{
+    color: #333467;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    margin-top: 1.5vh;
+    margin-bottom: 2vh;
+}
+
+.homeButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ruilenDoneren{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 3vw;
+    width: 50vw;
+    border: none;
+    color: #ffff;
+    background-color: #4E7141;
+    border-radius: 0.5rem;
+    /* exact values as Figma */
+    height: 60px;
+    width: 187px; 
+}
+
+.hoeWerktHet{
+    width: 75vw;
+    margin-top: 3vh;
+    border-top: #38853C solid 3px;
+    padding-top: 3vh;
+}
+
+/* class wordt toegevoegd aan .hoewerktHet met JS */
+.hoeWerktHetContrast{ 
+    border-top: #AAC789 solid 3px;
+}
+
+.hoeWerktHet h2{
+    color: #333467;
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 0.5vh;
+}
+
+.ruilenDonerenText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 42.5vh;
+    background-color: #333467;
+    margin: 3vh 0;
+    color: #ffff;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+.ruilenDonerenText h3{
+    font-size: 1.5rem;
+}
+
+.ruilenDonerenText p{
+    font-size: 1.1rem;
+}
+
+.pijlersAlles{
+    width: 75vw;
+}
+.pijlersAlles h2{
+    color: #333467;
+    font-size: 2rem;
+    width: 75vw;
+}
+
+.pijlers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 30vh;
+    background-color: #333467;
+    margin: 3vh 0;
+    color: #ffff;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+.pijlers h3{
+    font-size: 1.5rem;
+}
+
+.pijlers p{
+    font-size: 1.1rem;
+}
+
+.pijlers1Logo{
+    width: 20vw;
+}
+
+.menu{
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#menuButton{
+    color: #ffff;
+    font-size: 1.2rem;
+    background-color: #38853C;
+    padding: 3vw 5vw;
+    width: 30vw;
+    border-radius: 1.5rem 1.5rem 0 0;
+    border: none;
+}
+
+/* MENU OVERLAY */
+.overlay, .overlayPlant{
+    visibility: hidden; /* visibility: hidden zodat je niet kan klikken op de knoppen */
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(243, 240, 238, 0.8);
+    z-index: 2;
+    transition: 0.5s ease;
+    overflow: scroll;
+}
+
+/* opacity wordt veranderd zodat het menu zichtbaar is */
+.overlayOn{
+    visibility: visible;
+    opacity: 1;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+}
+/* ------------ */
+
+/* CONTRAST BUTTON */
+.contrastDiv{
+    position: fixed;
+}
+
+.contrastButton{
+    border: none;
+    width: 0;
+}
+
+.contrastButton img{
+    width: 12.5vw;
+    margin: 0.5em;
+}
+/* ------------ */
+
+/* DESKTOP CONTENT */
+.desktopSubtext{
+    display: none;
+}
+
+.desktopPlantEerste{
+    display: none;
+}
+
+.desktopPlant{
+    display: none;
+}
+
+/* MEDIA QUIRIES VOOR DESKTOP */
+@media screen and (min-width: 768px) {
+    /* index.html */
+
+    .contrastButton img{
+        width: 4vw;
+    }
+
+    #menuButton{
+        width: 10vw;
+        padding: 2vh;
+        font-size: 1.3rem;
+    }
+
+    .indexTitel{
+        font-size: 5rem;
+        width: 100%;
+    }
+
+    .logo{
+        width: 5vw;
+    }
+
+    .plant{
+        width: 100%;
+    }
+
+    .desktopMainContent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .desktopSection{
+        display: flex;
+    }
+
+    .desktopSubtext{
+        display: inline;
+        font-size: 7rem;
+        width: 30vw;
+        color: #333467;
+    }
+
+    .desktopPlanten{
+        width: 35vw;
+    }
+    
+    .desktopPlantEerste{
+        display: inline;
+    }
+
+    .homeButtons{
+        order: 2;
+    }
+
+    .subtext{
+        display: none;
+    }
+
+    .homeButtons{
+        display: flex;
+    }
+
+    .ruilenDoneren{
+        margin: 1vw;
+        transition: 0.4s ease;
+    }
+
+    .ruilenDoneren:hover{
+        background-color: #333467;
+    }
+
+    .hoeWerktHet{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        border: none;
+    }
+
+    .desktopPlant{
+        display: inline;
+        width: 25vw;
+    }
+
+    .hoeWerktHet h2{
+        display: none;
+    }
+
+    .ruilenDonerenText{
+        margin: 0 5vw;
+        width: 30vw;
+    }
+
+    .ruilenDonerenText h3{
+        font-size: 2rem;
+    }
+
+    .hoeWerktHet .pijlers1Logo{
+        width: 8vw;
+    }
+
+    .pijlersAlles{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .pijlersAlles h2{
+        margin-top: 5vh;
+        font-size: 3em;
+    }
+
+    .pijlersAllesDesktop{
+        display: flex;
+    }
+
+    .pijlers{
+        width: 50vw;
+        margin-right: 3vw;
+    }
+
+    .pijlers1Logo{
+        width: 7vw;
+    }
+    /* END index.html */
+  }
