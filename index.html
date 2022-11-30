@@ -25,27 +25,44 @@
     <header>
         <a href="index.html">
             <img class="logo" src="/assets/logoStyleguide.png" alt="plant logo">
+            <img class="logo logo-desktop" src="/assets/plantswap-logo-white.png" alt="plant logo">
         </a>
         <nav>
-            <li><a>link 1</a></li>
-            <li><a>link 1</a></li>
-            <li><a>link 1</a></li>
+            <li><a>Ruilen</a></li>
+            <li><a>Doneren</a></li>
+            <li><a>Locatie</a></li>
+            <li><a>Over ons</a></li>
         </nav>
+        <div class="nav-icons">
+            <!-- SEARCH ICON -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="40" height="40"
+                viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="10" cy="10" r="7" />
+                <line x1="21" y1="21" x2="15" y2="15" />
+            </svg>
+            <!-- USER ICON -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="40"
+                height="40" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="10" r="3" />
+                <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+            </svg>
+        </div>
     </header>
     <main>
-        <section class="desktopMainContent">
-            <div class="desktopSection">
-                <div class="desktopPlanten">
-                    <img class="plant" src="assets/plant.jpg" alt="plant foto homepagina">
-                </div>
-                <h2 class="subtext">Hoe kunnen we je helpen?</h2>
-            </div>
+        <div class="desktopPlanten">
+            <img class="plant" src="assets/plant.jpg" alt="plant foto homepagina">
+        </div>
+        <h2 class="subtext">Hoe kunnen we je helpen?</h2>
 
-            <div class="homeButtons">
-                <a class="ruilenDoneren" href="html/form.html">Ruilen</a>
-                <a class="ruilenDoneren" href="html/donateform.html">Doneren</a>
-            </div>
-        </section>
+        <div class="homeButtons">
+            <a class="ruilenDoneren" href="html/form.html">Ruilen</a>
+            <a class="ruilenDoneren" href="html/donateform.html">Doneren</a>
+        </div>
         <section class="hoeWerktHet">
             <h2>Hoe werkt het?</h2>
             <div class="ruilenDonerenText">
@@ -83,9 +100,11 @@
             </div>
         </section>
     </main>
+
     <div class="menu">
         <button id="menuButton" onclick="menuOpen()">Menu</button>
     </div>
+
     <footer>
     </footer>
     <script src="scripts/index.js"></script>
