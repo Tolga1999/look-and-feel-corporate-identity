@@ -31,8 +31,7 @@ body {
 header {
     display: flex;
     justify-content: center;
-    position: sticky;
-    top: 0;
+
 }
 
 .indexTitel {
@@ -288,6 +287,8 @@ main {
         background-color: var(--primary-color-blue);
         justify-content: space-between;
         padding: 0 4em;
+        position: sticky;
+        top: 0;
     }
 
     nav, .logo-desktop, .pijlers-alles-desktop, .nav-icons{
