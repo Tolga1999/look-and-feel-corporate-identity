@@ -188,16 +188,17 @@ function timerCall() {
         plantHomepage.classList.remove('plantOn');
         plantHomepage2.classList.add('plantOn');
         whichPlant = "plant3";
-        console.log("2");
     } else if (whichPlant == "plant3") {
         plantHomepage2.classList.remove('plantOn');
         plantHomepage3.classList.add('plantOn');
         whichPlant = "plant1";
-        console.log("3");
     } else if(whichPlant == "plant1"){
         plantHomepage3.classList.remove('plantOn');
         plantHomepage.classList.add('plantOn');
         whichPlant = "plant2"
-        console.log("1");
     }
   };
+
+// load in homecontainer options
+  let homeContainer = document.querySelector('.homeContainer');
+  homeContainer.classList.add('homeContainerOn');

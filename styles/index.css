@@ -9,6 +9,7 @@
 :root {
     --primary-color-green: #4E7141;
     --primary-color-blue: #333467;
+    --rgba-primary-color-blue: 51, 52, 103;
     --primary-color-orange: #F86C24;
     --background-color-white: #F3F0EE;
     --text-color-white: #fff;
@@ -91,25 +92,20 @@ main {
     align-items: center;
 }
 
+/* een relative container met absolute items erin */
 .desktopPlanten{
     position: relative;
     width: 100vw;
-    height: 50vh;
+    height: 70vh;
 }
 
 .plant {
+    position: absolute;
     width: 100vw;
-    height: 50vh;
+    height: 70vh;
     object-fit: cover;
     opacity: 0;
-    /* transform: translateY(-100vh); */
-}
-
-/* loop planten */
-.plant1, .plant2, .plant3{
-    position: absolute;
-    transition: 0.5s ease;
-    /* transform: translateY(100vh); */
+    transition: ease 1s;
 }
 
 /* planten worden getoond */
@@ -118,18 +114,43 @@ main {
     transform: translateY(0);
 }
 
+/* homecontainer */
+.homeContainer{
+    position: absolute;
+    top: 30%;
+    right: 12.5%;
+    left: 12.5%;
+    /* background-color: rgba(var(--rgba-primary-color-green), 0.9); */
+    background-color: var(--primary-color-green);
+    padding: 1.75rem;
+    border-radius: 1rem;
+    max-width: 600px;
+    transform: translateY(-60vh);
+    transition: ease 0.5s;
+}
+
+.homeContainerOn{
+    transform: translateY(0vh);
+}
+
 .subtext {
-    color: var(--primary-color-blue);
-    font-size: 1.25rem;
+    color: var(--text-color-white);
+    font-size: 1.5rem;
     letter-spacing: 0.05em;
-    margin-top: 1.5vh;
-    margin-bottom: 2vh;
+    margin-bottom: 1vh;
+}
+
+.homeContainer p{
+    color: var(--text-color-white);
+    font-size: 1.1rem;
 }
 
 .homeButtons {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-top: 1vw;
 }
 
 .ruilenDoneren {
@@ -138,15 +159,20 @@ main {
     justify-content: center;
     text-decoration: none;
     font-size: 1.2rem;
-    margin: 3vw;
     width: 50vw;
     border: none;
     color: var(--text-color-white);
-    background-color: var(--primary-color-green);
+    background-color: var(--primary-color-blue);
     border-radius: 0.5rem;
     /* exact values as Figma */
     height: 60px;
     width: 187px;
+    transition: ease 0.5s;
+    margin-top: 1.5vh;
+}
+
+.ruilenDoneren:hover{
+    background-color: var(--primary-color-orange);
 }
 
 .hoeWerktHet {
@@ -259,7 +285,7 @@ main {
     height: 100%;
     background-color: rgba(243, 240, 238, 0.8);
     z-index: 2;
-    transition: 0.5s ease;
+    transition: ease 0.5s;
     overflow: scroll;
 }
 
@@ -325,6 +351,16 @@ main {
     .subtext{
         font-size: 2rem;
     }
+
+    .homeButtons{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .homeButtons .ruilenDoneren{
+        margin: 0 0.75vw;
+    }
+    
     /* END index.html */
 }
 
