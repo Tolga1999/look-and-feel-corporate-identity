@@ -178,7 +178,10 @@ function veranderContrast() {
 let plantHomepage = document.querySelector('.plant');
 let plantHomepage2 = document.querySelector('.plant2');
 let plantHomepage3 = document.querySelector('.plant3');
-let whichPlant = "plant2"
+let whichPlant = "plant2";
+
+// load first image before function
+plantHomepage.classList.add('plantOn');
 
 // setInterval used to call the funtion every 2 seconds or 2000 milliseconds
 const interval = setInterval(timerCall, 2000);
