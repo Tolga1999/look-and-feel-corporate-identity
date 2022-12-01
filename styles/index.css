@@ -239,6 +239,7 @@ main {
     color: var(--background-color-white);
     padding: 1.5rem;
     border-radius: 0.5rem;
+    max-width: 650px;
 }
 
 .ruilenDonerenText:first-child {
@@ -267,7 +268,6 @@ main {
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color-blue);
-    margin-right: 1vw;
     color: var(--text-color-white);
     padding: 1.25rem;
     border-radius: 0.5rem;
@@ -282,8 +282,6 @@ main {
 }
 
 .pijlers1Logo {
-    width: 20vw;
-    max-width: 5rem;
     margin-top: 2vh;
 }
 
@@ -373,7 +371,6 @@ main {
 
     nav,
     .logo-desktop,
-    .pijlers-alles-desktop,
     .nav-icons {
         display: flex;
         align-items: center;
@@ -387,9 +384,10 @@ main {
         font-size: 2rem;
     }
 
-    .homeButtons {
+    .homeButtons, .pijlers-alles-desktop {
         display: flex;
         flex-direction: row;
+        align-items: flex-start;
     }
 
     .homeButtons .ruilenDoneren {
@@ -406,6 +404,7 @@ main {
 
     .pijlers+.pijlers {
         margin-top: 0;
+        margin-left: 1vw;
     }
 
     /* END index.html */
