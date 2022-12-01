@@ -16,6 +16,19 @@
 }
 
 /* UTILITY CLASSES KAN JE NOG GEBRUIKEN */
+h2 {
+    margin-bottom: 3vh;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1vh;
+}
+
+.hoeWerktHet,
+.pijlersAlles {
+    max-width: 80rem;
+}
 
 /* font toegevoegd van buurtcampus */
 @font-face {
@@ -52,37 +65,39 @@ header {
     margin: auto;
 }
 
-.logo-desktop{
+.logo-desktop {
     display: none;
     width: 100%;
     max-width: 9rem;
     padding: 0.5rem 0;
 }
 
-nav, .nav-icons{
+nav,
+.nav-icons {
     display: none;
 }
 
-nav li{
+nav li {
     font-size: 1.2rem;
     list-style-type: none;
     padding: 0 1rem;
 }
 
-nav li a{
+nav li a {
     color: var(--text-color-white);
     text-decoration: none;
     transition: ease 0.5s;
 }
 
-nav li a:hover{
+nav li a:hover {
     color: var(--primary-color-orange);
 }
 
-.nav-icons svg{
+.nav-icons svg {
     width: 100%;
     padding: 0 1rem;
 }
+
 /* Navigatie END */
 
 main {
@@ -90,10 +105,11 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2vh;
 }
 
 /* een relative container met absolute items erin */
-.desktopPlanten{
+.desktopPlanten {
     position: relative;
     width: 100vw;
     height: 70vh;
@@ -115,13 +131,12 @@ main {
 }
 
 /* homecontainer */
-.homeContainer{
+.homeContainer {
     position: absolute;
     top: 30%;
     right: 12.5%;
     left: 12.5%;
-    /* background-color: rgba(var(--rgba-primary-color-green), 0.9); */
-    background-color: var(--primary-color-green);
+    background-color: var(--primary-color-blue);
     padding: 1.75rem;
     border-radius: 1rem;
     max-width: 600px;
@@ -129,7 +144,7 @@ main {
     transition: ease 0.5s;
 }
 
-.homeContainerOn{
+.homeContainerOn {
     transform: translateY(0vh);
 }
 
@@ -140,7 +155,8 @@ main {
     margin-bottom: 1vh;
 }
 
-.homeContainer p{
+.homeContainer p {
+    display: none;
     color: var(--text-color-white);
     font-size: 1.1rem;
 }
@@ -162,7 +178,7 @@ main {
     width: 50vw;
     border: none;
     color: var(--text-color-white);
-    background-color: var(--primary-color-blue);
+    background-color: var(--primary-color-green);
     border-radius: 0.5rem;
     /* exact values as Figma */
     height: 60px;
@@ -171,27 +187,47 @@ main {
     margin-top: 1.5vh;
 }
 
-.ruilenDoneren:hover{
+.ruilenDoneren:hover {
     background-color: var(--primary-color-orange);
 }
 
+/* Hoe werkt het section */
 .hoeWerktHet {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 75vw;
-    max-width: 40rem;
     margin-top: 3vh;
-    border-top: var(--primary-color-green) solid 3px;
-    padding-top: 3vh;
 }
 
-/* class wordt toegevoegd aan .hoewerktHet met JS */
-.hoeWerktHetContrast {
-    border-top: var(--primary-color-green) solid 3px;
+.hoeWerktHetImg {
+    display: flex;
+    flex-direction: row;
+}
+
+.hoeWerktHetImg>img {
+    display: none;
+    width: 50%;
+    max-width: 400px;
+    height: 600px;
+    border-radius: 0.5rem 0 0 0.5rem;
+    object-fit: cover;
 }
 
 .hoeWerktHet h2 {
     color: var(--primary-color-blue);
     font-size: 2rem;
-    margin: 0;
+}
+
+/* class wordt toegevoegd aan .hoewerktHet met JS */
+.hoeWerktHetContrast {
+    border-top: var(--primary-color-orange) solid 3px;
+}
+
+.ruilenDonerenTextSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .ruilenDonerenText {
@@ -199,16 +235,14 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 42.5vh;
     background-color: var(--primary-color-blue);
-    margin-top: 3vh;
     color: var(--background-color-white);
-    padding: 1.25rem;
+    padding: 1.5rem;
     border-radius: 0.5rem;
 }
 
-.ruilenDonerenText h3 {
-    font-size: 1.5rem;
+.ruilenDonerenText:first-child {
+    margin-bottom: 3vh;
 }
 
 .ruilenDonerenText p {
@@ -227,10 +261,6 @@ main {
     width: 75vw;
 }
 
-.pijlers-alles-desktop{
-    margin-top: 3vh;
-}
-
 .pijlers {
     display: flex;
     flex-direction: column;
@@ -238,14 +268,13 @@ main {
     align-items: center;
     background-color: var(--primary-color-blue);
     margin-right: 1vw;
-    margin-top: 3vw;
     color: var(--text-color-white);
     padding: 1.25rem;
     border-radius: 0.5rem;
 }
 
-.pijlers h3 {
-    font-size: 1.5rem;
+.pijlers+.pijlers {
+    margin-top: 3vh;
 }
 
 .pijlers p {
@@ -255,6 +284,7 @@ main {
 .pijlers1Logo {
     width: 20vw;
     max-width: 5rem;
+    margin-top: 2vh;
 }
 
 .menu {
@@ -327,11 +357,13 @@ main {
 @media (min-width: 768px) {
 
     /* index.html */
-    .menu, .logo, .contrastButton{
+    .menu,
+    .logo,
+    .contrastButton {
         display: none;
     }
 
-    header{
+    header {
         background-color: var(--primary-color-blue);
         justify-content: space-between;
         padding: 0 4em;
@@ -339,31 +371,51 @@ main {
         top: 0;
     }
 
-    nav, .logo-desktop, .pijlers-alles-desktop, .nav-icons{
+    nav,
+    .logo-desktop,
+    .pijlers-alles-desktop,
+    .nav-icons {
         display: flex;
         align-items: center;
     }
 
-    .logo{
+    .logo {
         margin: 0;
     }
 
-    .subtext{
+    .subtext {
         font-size: 2rem;
     }
 
-    .homeButtons{
+    .homeButtons {
         display: flex;
         flex-direction: row;
     }
 
-    .homeButtons .ruilenDoneren{
+    .homeButtons .ruilenDoneren {
         margin: 0 0.75vw;
     }
-    
+
+    .hoeWerktHetImg>img, .homeContainer p{
+        display: inline;
+    }
+
+    .ruilenDonerenText {
+        border-radius: 0rem 0.5rem 0.5rem 0rem;
+    }
+
+    .pijlers+.pijlers {
+        margin-top: 0;
+    }
+
     /* END index.html */
 }
 
+@media (max-width: 1250px) {
+    .ruilenDonerenText2 {
+        display: none;
+    }
+}
 
 /* ------------ FORMULIEREN PAGINA'S ------------- */
 .titelForm {
