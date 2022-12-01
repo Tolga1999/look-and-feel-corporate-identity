@@ -31,6 +31,7 @@ body {
 header {
     display: flex;
     justify-content: center;
+    z-index: 1;
 
 }
 
@@ -88,13 +89,33 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 1.5rem;
+}
+
+.desktopPlanten{
+    position: relative;
+    width: 100vw;
+    height: 50vh;
 }
 
 .plant {
-    width: 80vw;
+    width: 100vw;
     height: 50vh;
     object-fit: cover;
+    opacity: 0;
+    /* transform: translateY(-100vh); */
+}
+
+/* loop planten */
+.plant1, .plant2, .plant3{
+    position: absolute;
+    transition: 0.5s ease;
+    /* transform: translateY(100vh); */
+}
+
+/* planten worden getoond */
+.plantOn {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .subtext {
@@ -260,6 +281,7 @@ main {
 /* CONTRAST BUTTON */
 .contrastDiv {
     position: fixed;
+    z-index: 1;
 }
 
 .contrastButton {
