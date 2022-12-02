@@ -180,7 +180,7 @@ let plantHomepage2 = document.querySelector('.plant2');
 let plantHomepage3 = document.querySelector('.plant3');
 let whichPlant = "plant2";
 
-// load first image before function
+// load first image before setInterval function
 plantHomepage.classList.add('plantOn');
 
 // setInterval used to call the funtion every 2 seconds or 2000 milliseconds
@@ -205,3 +205,16 @@ function timerCall() {
 // load in homecontainer options
   let homeContainer = document.querySelector('.homeContainer');
   homeContainer.classList.add('homeContainerOn');
+
+// LOCATION MAP
+// show location on map
+let map = document.querySelector('.location');
+  function locationShow(){
+    map.classList.toggle('locationOn');
+  }
+// close location map
+let locationButton = document.querySelector('.close-location');
+function closeLocation(){
+    console.log("test");
+    map.classList.remove('locationOn');
+}
