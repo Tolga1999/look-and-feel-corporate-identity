@@ -19,6 +19,7 @@ const star3 = document.querySelector('.starIcon3');
 const star4 = document.querySelector('.starIcon4');
 const star5 = document.querySelector('.starIcon5');
 
+// overlay menu
 function menuOpen() {
     overlay.classList.add('overlayOn');
     menuButton.style.visibility = 'hidden';
@@ -31,6 +32,12 @@ function gaTerug() {
     menuButton.style.visibility = 'visible';
     menuButton.style.opacity = '1';
     body.style = '';
+}
+
+// laat locatie zien in de overlay menu
+function locationShowOverlayMenu(){
+    gaTerug();
+    locationShow();
 }
 
 // ruilen pagina
@@ -215,6 +222,7 @@ let map = document.querySelector('.location');
 // close location map
 let locationButton = document.querySelector('.close-location');
 function closeLocation(){
-    console.log("test");
     map.classList.remove('locationOn');
 }
+
+
