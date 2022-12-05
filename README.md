@@ -2,7 +2,7 @@
 Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. 
 De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# Plant Swap locatie pop up.
+# Plant Swap locatie pop up
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 Een pop up voor de locatie van Buurtcampus Oost, dit wordt getoond bovenop je huidige scherm.
 
@@ -24,5 +24,5 @@ Ik heb gebruik gemaakt van HTML, CSS en JS.
 - JS: In Javascript wordt de class `.locationOn` toegevoegd aan de class `.location`, je kan de link verder "togglen" en de location map weer uitzetten.
 
 ## Bronnen
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
