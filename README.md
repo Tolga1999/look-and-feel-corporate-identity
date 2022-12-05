@@ -14,10 +14,14 @@ Je klikt op de knop "locatie" wat ervoor zorgt dat de pop up "triggered" en tevo
 ![image](https://user-images.githubusercontent.com/112855878/205628961-09f64b68-fcea-4e75-8855-2b454a1874f0.png)
 
 <!-- Voeg een link toe naar Github Pages 🌐-->
-https://tolga1999.github.io/look-and-feel-corporate-identity/
+Github pages link: https://tolga1999.github.io/look-and-feel-corporate-identity/
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+Ik heb gebruik gemaakt van HTML, CSS en JS. 
+- HTML: De "location" div staat standaard uit en wordt getoond met de hulp van JS en CSS, verder zie je `<iframe>` wat een export is van Google maps zelf.
+- CSS: De twee belangrijke CSS classes zijn `.location` en `.locationOn`, de class `.locationOn` wordt toegevoegd (toggled) aan de class `.location` en weer verwijderd met JS.
+- JS: In Javascript wordt de class `.locationOn` toegevoegd aan de class `.location`, je kan de link verder "togglen" en de location map weer uitzetten.
 
 ## Bronnen
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
